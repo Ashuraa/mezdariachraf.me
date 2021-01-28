@@ -12,6 +12,13 @@
 	<link href="dist/lity.css" rel="stylesheet">
 	<script type="text/javascript" src="jquery-3.5.1.slim.min.js"></script>
 	<script src="dist/lity.js"></script>
+	<script type="text/javascript">
+		jQuery(document).on('lity:ready', function(event, lightbox) {
+   	jQuery(event.currentTarget.activeElement).find('.lity-content').prepend('<center><h1><strong>' + lightbox.opener().data('title') + '</strong></h1></center><br>');
+
+   	jQuery(event.currentTarget.activeElement).find('.lity-content').append('<br><br><center><p> ' + lightbox.opener().data('desc') + '</p></center>');
+});
+	</script>
 </head>
 <body>
 	<div class="particle">
@@ -372,7 +379,8 @@
 		<div class="row">
 			<div class="col-xl">
 				<div class="centerBox">
-					<a href="https://www.youtube.com/watch?v=WiKsGlsLfZE" data-lity>
+					<a href="https://www.youtube.com/watch?v=WiKsGlsLfZE" data-lity data-title="Hero Dash" data-desc="
+					Projet d'école : Création d'un One button game en Haxe avec OpenFl.">
 						<div class="categoryWrapper">
 							<div class="rainbow">
 								<img src="img/heroDash.PNG">
@@ -392,7 +400,9 @@
 			</div>
 			<div class="col-xl">
 				<div class="centerBox">
-					<a href="https://youtu.be/K0cAXqhaCZA" data-lity>
+					<a href="https://youtu.be/K0cAXqhaCZA" data-lity data-title="MultiBan" data-desc="
+					Projet d'école : Travail en equipe de 3 pour créer un sokoban avec une spécial feature.
+					La feature est celle des caisse jumelles.Coder en Haxe avec OpenFl.">
 						<div class="categoryWrapper">
 							<div class="rainbow">
 								<img src="img/sokoban.PNG">
@@ -413,7 +423,8 @@
 			</div>
 			<div class="col-xl">
 				<div class="centerBox">
-					<a href="https://www.youtube.com/watch?v=9rZrHvGZjaI" data-lity>
+					<a href="https://www.youtube.com/watch?v=9rZrHvGZjaI" data-lity data-title="Shmup" data-desc="
+					Projet d'école : Création d'un niveau de Shmup en As3 avec Animate et Flashdevelop.">
 						<div class="categoryWrapper">
 							<div class="rainbow">
 								<img src="img/shmup.PNG">
@@ -435,7 +446,8 @@
 		<div class="row">
 			<div class="col-xl">
 				<div class="centerBox">
-					<a href="https://youtu.be/ArPxwL1Jhbs" data-lity>
+					<a href="https://youtu.be/ArPxwL1Jhbs" data-lity data-title="Chilly Space" data-desc="
+					Projet perso : Jeu mobile réaliser sur unity. Inspiré du jeu Chilly Snow.">
 						<div class="categoryWrapper">
 							<div class="rainbow">
 								<img src="img/prevCS.png">
@@ -444,7 +456,7 @@
 								<span>
 									<span>
 										<span data-attr-span="see more">
-											Space Chill
+											Chilly Space
 										</span>
 									</span>
 								</span>
@@ -455,7 +467,8 @@
 			</div>
 			<div class="col-xl">
 				<div class="centerBox">
-					<a href="https://youtu.be/4Vr3cbKROxc" data-lity>
+					<a href="https://youtu.be/4Vr3cbKROxc" data-lity data-title="Carre Jumper" data-desc="
+					Projet perso : Mon premier jeu mobile hyper casual fait sur Unity 3D.">
 						<div class="categoryWrapper">
 							<div class="rainbow">
 								<img src="img/prevCJ.png">
@@ -475,7 +488,8 @@
 			</div>
 			<div class="col-xl">
 				<div class="centerBox">
-					<a href="https://youtu.be/w5fWTvMUpAw" data-lity>
+					<a href="https://youtu.be/w5fWTvMUpAw" data-lity data-title="Memory Match" data-desc="
+					Projet perso : Mon premier jeu mobile fait sur Android studio.">
 						<div class="categoryWrapper">
 							<div class="rainbow">
 								<img src="img/prevMM.png">
@@ -497,7 +511,8 @@
 		<div class="row">
 			<div class="col-xl">
 				<div class="centerBox">
-					<a href="https://www.youtube.com/watch?v=BHbv6BlrkbI" data-lity>
+					<a href="https://www.youtube.com/watch?v=BHbv6BlrkbI" data-lity data-title="Linear Escape" data-desc="
+					Prototype : Prototype de jeu mobile fait sur Unity3D.">
 						<div class="categoryWrapper">
 							<div class="rainbow">
 								<img src="img/prevLE.png">

@@ -10,7 +10,7 @@
   left: 0;
   white-space: nowrap;
   background: #0b0b0b;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.6);
   outline: none !important;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
@@ -64,6 +64,7 @@
   opacity: 1;
 }
 .lity-container {
+  margin-top: -5%;
   z-index: 9992;
   position: relative;
   text-align: left;
@@ -75,6 +76,12 @@
   outline: none !important;
 }
 .lity-content {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
   z-index: 9993;
   width: 100%;
   -webkit-transform: scale(1);
@@ -172,7 +179,7 @@
 .lity-facebookvideo .lity-container,
 .lity-googlemaps .lity-container {
   width: 100%;
-  max-width: 964px;
+  max-width: 1224px;
 }
 .lity-iframe-container {
   width: 100%;
