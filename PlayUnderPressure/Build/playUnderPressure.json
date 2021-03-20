@@ -1,0 +1,17 @@
+{
+"companyName": "IsartDigital",
+"productName": "Under Pressure",
+"productVersion": "1",
+"dataUrl": "playUnderPressure.data.unityweb",
+"wasmCodeUrl": "playUnderPressure.wasm.code.unityweb",
+"wasmFrameworkUrl": "playUnderPressure.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "playUnderPressure.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.0f1"
+}
