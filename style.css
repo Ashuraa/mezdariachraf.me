@@ -322,6 +322,22 @@ html {
   scroll-behavior: smooth;
 }
 
+.tag_panel{
+  position: absolute;
+  top: 27px;
+  left: 25px;
+  border-spacing: 10px;
+}
+
+.tag{
+  display: inline;
+  background-color: rgba(6, 21, 0, 0.7);
+  color: white;
+  border: solid black 2px;
+  border-radius: 10px;
+  padding: 2px 5px 2px 5px;
+}
+
 .scrolldown {
   position: relative;
   left: 50%;
