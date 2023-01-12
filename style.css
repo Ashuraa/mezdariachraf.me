@@ -258,12 +258,39 @@ h1{
   margin: auto;
 }
 
+#myVideo {
+  object-fit: fill;
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+@media (max-width: 767px) {
+  #myVideo {
+    object-fit: fill;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+    z-index: -1;
+  }
+}
+
 .about_section{
-  background-image: url(img/bg.png);
+  /*background-image: url(img/bg.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
+  background-color: black;
   padding-bottom: 10%;
-  color: #ebebeb;
+  color: black;
+  z-index: -1;
 }
 
 .work_section{
