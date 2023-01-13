@@ -291,6 +291,7 @@ h1{
   padding-bottom: 10%;
   color: black;
   z-index: -1;
+  background-image: url("img/what-the-hex-dark.png");
 }
 
 .work_section{
