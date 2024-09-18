@@ -5,8 +5,10 @@ let player;
 * Function to create and manage the YouTube player instance using YouTube IFrame API
 */
 window.onYouTubeIframeAPIReady = function() {
-    console.log('YouTube IFrame API is ready');
-    
+    setPlayer();
+}
+
+function setPlayer(){
     player = new YT.Player('projectPlayer', {
         videoId: 'cBkQOML-TDU',
         events: {
@@ -20,7 +22,7 @@ window.onYouTubeIframeAPIReady = function() {
 * @param {Object} event - The event object from the YouTube player API.
 */
 function onPlayerReady(event) {
-    console.log('Player is ready');
+    console.log('YouTube IFrame API is ready');
     // Can start the video automatically if needed (optional)
     // event.target.playVideo();
 }
@@ -148,6 +150,10 @@ function OpenProject(element) {
         
         // Check if player is initialized and load the video
         if (player && player.loadVideoById) {
+            player.cueVideoById(data.responseJSON[id].video);
+        }
+        else{
+            setPlayer();
             player.cueVideoById(data.responseJSON[id].video);
         }
         
