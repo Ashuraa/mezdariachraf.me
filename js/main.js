@@ -44,9 +44,9 @@ var activeCards;
 
 // Fetch project data from JSON file
 var data = $.getJSON("Data/DataProject.json", function() {
-    console.log("success getting data project");
+    console.log("Success getting portfolio data project.");
 }).fail(function(jqXHR, textStatus, errorThrown) {
-    console.log('Data project request failed! ' + textStatus);
+    console.log('Portfolio Data project request failed! ' + textStatus);
 });
 
 // jQuery ready function to initialize when the DOM is fully loaded
@@ -150,10 +150,6 @@ function OpenProject(element) {
         
         // Check if player is initialized and load the video
         if (player && player.loadVideoById) {
-            player.cueVideoById(data.responseJSON[id].video);
-        }
-        else{
-            setPlayer();
             player.cueVideoById(data.responseJSON[id].video);
         }
         
@@ -268,7 +264,6 @@ function rotateAnimation(element, degree, animDuration){
         }
         
         await sleep(500);
-        console.log($('#projectPlayer').attr('name'));
         $('#projectPlayer').animate({ left: videoPos }, 500); // Animate video player position
         $('.description').animate({ left: descPos }, 500); // Animate description position
     }
