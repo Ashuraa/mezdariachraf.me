@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #100721;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+}
+
+a, a:visited, a:active {
+  color: #9546f5;
+}
+
+a:hover{
+  border-style:groove;
+  padding: 5px;
+}
+
+#HeaderPres{
+  width: 100%;
+  position: absolute;
+  height: 428px;
+  top: 0px;
+  z-index: 0;
+  background: repeating-linear-gradient(0deg, #49008d1f 0%, #46007969 10%, #22222200 20%, rgb(72 13 145 / 12%) 50%) 0 / 30px 30px;
+}
+
+.videoPres{
+  position: absolute;
+  width: 500px;
+  height: 285px;
+  right: 8%;
+  top: 18%;
+  rotate: 10deg;
+  border: 2px solid;
+  box-shadow: 0 3px 10px -1px black;
+  border-color: #490d91;
+}
+
+.PortfolioDesc{
+  position: absolute;
+  color: azure;
+  width: 600px;
+  left: 6%;
+  top: 160px;
+  rotate: -20deg;
+  z-index: 5;
+
+  > h1 {
+    rotate: 5deg;
+    position: absolute;
+    top: -100px;
+    left: 5%;
+    font-size: 60px;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #490d91, 0 0 0.5em #490d91, 0 0 0.1em #490d91, 0 10px 3px #000;
+  }
+}
+
+.HeaderHide{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.74);
+  width: 100%;
+  height: 110%;
+  z-index: 10;
+}
+
+.HeaderHide:hover{
+  .cross{
+    background: rgb(148, 0, 0);
+  }
+}
+
+.cross {
+  width: 50px;
+  height: 5px;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -12.5px;
+  margin-top: -1.5px;
+}
+
+footer{
+    position: fixed;
+    bottom: 1%;
+    color: white;
+    font-size: small;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+.anim-text {
+  --angle: 45deg;
+  background: linear-gradient(
+    var(--angle),
+    #f672ca,
+    #6eccee
+  );
+  width: 30vmin;
+  aspect-ratio: 3/2;
+  mask-image: url("../img/LogoPortfolio.png");
+  mask-repeat: no-repeat;
+  mask-position: center center; 
+  mask-size: contain;
+  position: absolute;
+  bottom: 130px;
+  left: -30px;
+  z-index: 10000;
+  animation: anim-text 4s linear infinite;
+  perspective: 40px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 7vmin;
+    left: 0vmin;
+    width: 48vmin;
+    height: 14vmin;
+    background: repeating-radial-gradient(black, transparent 10vmin);
+    mix-blend-mode: overlay;
+    opacity: 0.2;
+    transform: rotate(347deg);
+  }
+}
+
+@keyframes anim-text {
+  from {
+    --angle: 45deg;
+    transform: translateY(-0vh);
+  }
+
+  49.5% {
+    --angle: 360deg;
+    transform: translateY(-1vh);
+    filter: brightness(100%);
+  }
+  50% {
+    --angle: 360deg;
+    transform: translateY(-1vh) scaleY(0.1) skewX(253deg);
+    filter: brightness(190%);
+  }
+
+  51% {
+    --angle: 360deg;
+    transform: translateY(-1vh) scaleY(0.5) skewY(37deg);
+    filter: brightness(190%);
+  }
+
+  52% {
+    --angle: 360deg;
+    filter: brightness(190%);
+    transform: translateY(-0vh);
+  }
+
+  to {
+    --angle: 45deg;
+    transform: translateY(-0vh);
+  }
+}
+
+.triangle {
+  position: absolute;
+  width: 30vmin;
+  bottom: 220px;
+  left: -30px;
+  aspect-ratio: 4/3;
+  transform: rotate(1deg);
+  filter: drop-shadow(0 0 15px #6eccee);
+  z-index: 5;
+  perspective: 1000px;
+  animation: triangle 10s linear infinite;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 1), rgba(110, 204, 238, 1));
+    clip-path: polygon(
+      6% 22%,
+      29% 94%,
+      29% 94%,
+      6% 22%,
+      94% 3%,
+      29% 94%,
+      7% 22%,
+      4% 19%,
+      29% 94%,
+      100% 0%
+    );
+  }
+}
+
+@keyframes triangle {
+  from {
+    transform: translate(3vmin, 11.8vmin) rotate(-5deg);
+  }
+
+  50% {
+    transform: translate(3vmin, 12vmin) rotateX(5deg) rotateY(7deg);
+  }
+
+  to {
+    transform: translate(3vmin, 11.8vmin) rotate(-5deg);
+  }
+}

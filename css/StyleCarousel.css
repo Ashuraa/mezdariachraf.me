@@ -1,0 +1,113 @@
+
+.owl-item {
+  flex: 0 0 300px;
+  border-radius: 0.5rem;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 1px 5px 15px #1e0e3e;
+  position: relative;
+  overflow: hidden; 
+  height: 100%;
+
+    .content {
+    font-size: 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    opacity: 0;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    background: rgb(2, 2, 46);
+    background: linear-gradient(
+      0deg,
+      rgba(2, 2, 46, 0.6755077030812324) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: translatey(100%);
+    transition: opacity 0.4s ease-in-out, transform 0.4s 0.2s;
+    visibility: hidden;
+
+    span {
+      display: block;
+      margin-top: 5px;
+      font-size: 1.2rem;
+    }
+    
+  }
+
+  &:hover {
+    flex: 0 0 350px;
+    box-shadow: 1px 3px 15px #7645d8;
+    transform: translatey(-30px);
+  }
+
+  &:hover .content {
+    opacity: 1;
+    transform: translatey(0%);
+    visibility: visible;
+  }
+   
+}
+
+.item {
+  height: 100%;
+}
+
+  .container {
+    width: 100%;
+    display: flex;
+    height: 95%;
+    gap: 30px;
+    position: absolute;
+    margin: 0px;
+    margin-top: 3%;
+    padding: 0px;
+    padding-bottom: 7%;
+  }
+
+  .owl-stage-outer, .owl-stage, .owl-item{
+    height: 100%;
+  }
+
+  .owl-stage-outer{
+    overflow: visible;
+  }
+
+.scroll-content {
+  background: #08000e;
+  position: absolute;
+  top: 48%;
+  width: 100%;
+  height: 55%;
+  left: 0px;
+  overflow: hidden;
+  border-top: 5px solid;
+  border-image: linear-gradient(60deg,#0c87c46e,#57009e,#0c87c46e) 1 0 0 0;
+  /* background-image: url("../img/hexPattern.png"); */
+  background-color: #000000;
+  opacity: 1;
+  background-image:  linear-gradient(#27002d 1px, transparent 1px), linear-gradient(to right, #27002d 1px, #000000 1px);
+  background-size: 20px 20px;
+}
+
+.tag_panel{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-spacing: 10px;
+}
+
+.tag{
+  display: inline-block;
+  background-color: rgb(86 1 158 / 42%);
+  color: white;
+  border: solid #f4f2f6 1px;
+  border-radius: 10px;
+  padding: 5px 6px 5px 6px;
+  margin-bottom: 5px;
+}
+
+
+
