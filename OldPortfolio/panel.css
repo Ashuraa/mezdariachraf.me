@@ -1,0 +1,249 @@
+body{
+	height: 1vh;
+	margin: 0;
+	padding: 0;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.centerBox{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 350px;
+}
+
+.categoryWrapper{
+	height: 280px;
+	width: 460px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.categoryWrapper:after{
+	position: absolute;
+	top:0;
+	left: 0;
+	right:0;
+	bottom: 0;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a29ca9+0,95909b+99 */
+background: #99ffff; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #000 0%, #000 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #000 0%,#000 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #000 0%,#000 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a29ca9', endColorstr='#95909b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	content: '';
+	opacity: 0;
+		-webkit-transition: opacity 0.9s ease 0s; 
+}
+
+.categoryWrapper:hover:after{
+	opacity: 0.4;
+}
+
+.categoryWrapper h1{
+	color:black;
+	font-size: 50px;
+	letter-spacing: 2px;
+	-webkit-transition: all 0.15s ease 0s; 
+	position: relative;
+	z-index: 10;
+}
+
+.categoryWrapper:hover h1{
+	transform: translateY(-10px);
+}
+
+.categoryWrapper button{
+	position: absolute;
+	transform: translatey(60px);
+	-webkit-appearance: none;
+	border: none;
+	background: none;
+	color:black;
+	width: 250px;
+	height:50px;
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+	margin-top: 230px;
+	outline: none;
+	z-index: 10;
+}
+
+.categoryWrapper button span{
+	display: block;
+	position: relative;
+	line-height: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.categoryWrapper button > span:after{
+	content:'';
+	position: absolute;
+	top:0;
+	left: 50%;
+	width: 20px;
+	height: 0;
+	
+	border: 1px solid black;
+	border-left: none;
+	border-bottom: none;
+	
+	    transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+}
+
+.categoryWrapper:hover button > span:after{
+	width: calc(50% - 1px);
+	height: calc(100% - 2px);
+	transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+}
+
+.categoryWrapper button > span:before{
+	content:'';
+	position: absolute;
+	top:0;
+	right: 50%;
+	width: 20px;
+	height: 0;
+	
+	border: 1px solid black;
+	border-right: none;
+	border-bottom: none;
+	
+	    transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+}
+
+.categoryWrapper:hover button > span:before{
+	width: calc(50% - 1px);
+	height: calc(100% - 2px);
+	transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+}
+
+.categoryWrapper button > span > span:before{
+	content:'';
+	position: absolute;
+	bottom:0;
+	right: 0%;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	
+}
+
+.categoryWrapper:hover button > span > span:before{
+	opacity: 1;
+	border-bottom: 1px solid black;
+	width: calc(50%);
+	height: 1px;
+	transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+}
+
+.categoryWrapper button > span > span:after{
+	content:'';
+	position: absolute;
+	bottom:0;
+	left: 0%;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	
+}
+
+.categoryWrapper:hover button > span > span:after{
+	opacity: 1;
+	border-bottom: 1px solid black;
+	width: calc(50%);
+	height: 1px;
+	transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+}
+
+.categoryWrapper button > span > span > span{
+	transition: color 0.15s ease-out 0.3s;
+	color: transparent;
+}
+
+.categoryWrapper:hover button > span > span > span{
+	color:black;
+}
+
+.categoryWrapper button > span > span > span:after{
+	position: absolute;
+	top:0;left:0;right:0;bottom:0;
+	color:white;
+	content: attr(data-attr-span);
+	width: 0%;
+	height: 100%;
+	background:black;
+	white-space: nowrap;
+	text-align: center;
+	margin: auto;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	transition: width 0.2s;
+}
+
+.categoryWrapper button:hover > span > span > span:after{
+	width: 100%;
+}
+
+
+/* Border Anim */
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.rainbow {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.rainbow img{
+	
+}
+
+.rainbow::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #399953;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(#69ca62, #000), linear-gradient(#fff, #fff), linear-gradient(#69ca62, #000);
+  animation: rotate 4s linear infinite;
+}
+.rainbow::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 3px;
+  top: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  background: white;
+  border-radius: 5px;
+}
+
+
+.rainbow img{
+	width: 100%;
+	height: 100%;
+ }

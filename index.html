@@ -1,680 +1,293 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Portfolio - Achraf MEZDARI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Achraf Mezdari</title>
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/styleMain.css">
+    <link rel="stylesheet" href="css/styleMenu.css">
+    <link rel="stylesheet" href="css/StyleCarousel.css">
+    <link rel="stylesheet" href="css/StyleProject.css">
+    <link rel="stylesheet" href="css/StyleHeader.css">
 
-    <link rel="shortcut icon" href="img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="panel.css">
-    <link rel="stylesheet" type="text/css" href="particle.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="dist/lity.css" rel="stylesheet">
-
-    <script type="text/javascript" src="jquery-3.5.1.slim.min.js"></script>
-    <script src="dist/lity.js"></script>
-    <script type="text/javascript">
-        jQuery(document).on('lity:ready', function(event, lightbox) {
-            jQuery(event.currentTarget.activeElement).find('.lity-content').prepend('<center><h1><strong>' + lightbox.opener().data('title') + '</strong></h1></center><br>');
-
-            jQuery(event.currentTarget.activeElement).find('.lity-content').append('<br><br><center><p> ' + lightbox.opener().data('desc') + '</p></center>');
-        });
-    </script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6QKDR70Q5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-X6QKDR70Q5');
-    </script>
 </head>
 <body>
-    <div class="particle" id="particle">
-        <script type="text/javascript">
-            var gal = document.getElementById('particle');
-
-            for (var i = 1; i < 100 ; i++) {
-                gal.innerHTML += "<div class='circle-container'><div class='circle'></div></div>";
-            };
-        </script>
-        <div class="circle-container">
-            <div class="circle"></div>
-        </div>
+  <div id="HeaderPres">
+    <div class="option">
+      <label for="perf">Low FPS</label>
+      <input type="checkbox" id="perf" name="perf" onclick="OptionGooFilter()"/>
     </div>
-    <div class="container-fluid about_section" id="About">
-        <video autoplay muted loop id="myVideo">
-            <source src="https://github.com/AchrafMe/mezdariachraf.me/raw/main/Video/Achraf_DemoReel.mp4" type="video/mp4">
-            </video>
-            <div class="row">
-                <div class="col-xl roundAbout">
-                    <ul id="about">
-                        <a class="about-button icon-plus" href="#about" title="Show navigation"></a>
-                        <a class="about-button icon-minus" href="#0" title="Hide navigation"></a>
-                        <li class="about-item">
-                            <a target="_blank" rel="noopener noreferrer" href="http://github.com/AchrafMe">
-                                <div class="github">
-                                    <img src="img/Github.png">
-                                </div>
-                            </a>
-                        </li>
-                        <li class="about-item">
-                            <a target="_blank" rel="noopener noreferrer" href="http://linkedin.com/in/achraf-mezdari">
-                                <div class="linkdin">
-                                    <img src="img/linkedin.png">
-                                </div>
-                            </a>
-                        </li>
-                        <li class="about-item">
-                            <a target="_blank" rel="noopener noreferrer" href="http://youtube.com/channel/UCfPCVCj2HdgpVZm9vdaBabQ">
-                                <div class="youtube">
-                                    <img src="img/youtube.png">
-                                </div>
-                            </a>
-                        </li>
-                        <li class="about-item">
-                            <a target="_blank" rel="noopener noreferrer" href="http://twitter.com/AchrafMezdari">
-                                <div class="twitter">
-                                    <img src="img/twitter.png">
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-xl"><br><br><br><br><br><br><br><br>
-                    <div class="bg-text">
-                        <h1>Achraf MEZDARI</h1><br><br><br>
-                        <p>
-                            Bienvenu sur mon portfolio. Je m'appelle Achraf, diplômé en <b>BTS service informatique aux organisations</b> et Mastère en <b>Game Design and programming à Isart Digital</b>.
-                            Vous trouverez ici tous mes projets d'école et personnel. Vous pouvez me contacter via les réseaux sociaux ou mon mail.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="scrolldown">
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-            </div>
-        </div>
-        <div class="container-fluid work_section" id="Work">
-            <hr>
-            <h1><center>Projects</center></h1>
-            <div class="row">
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/41HT3vvUQDY" data-lity data-title="Sikaria" data-desc="
-                        Projet de fin d'étude fait sur Unreal Engine 4 avec une équipe de 2 Produceurs, 4 Graphistes 3D, 2 Graphistes 2D,, 4 Programmeurs, 4 Designer et 3 Game design and Programmeurs.
-Sur ce projet je me suis occupé de l'intégration de l'interface utilisateur, du fix des bugs, programmation des réglages du jeu ainsi que du design du gamefeel et de la big picture. Le jeu est disponible sur Itch.io.
-                        <a class=&quot;play-btn&quot; href=https://isart-digital.itch.io/sikaria target=&quot;_blank&quot;></a>">">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/Sikaria.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">C++</div>
-                                        <div class="tag">Blueprint</div>
-                                        <div class="tag">Unreal Engine</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Sikaria
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/rceFqPD_pUY" data-lity data-title="Fruit Merge 3D" data-desc="
-                        Projet Perso : Inspirer par le jeu suika game j'ai voulu creer une version du jeu en 3D sur Mobile.<br/>
-                        Une version WebGl est dispo sur Itch.io. <br/>
-                        <iframe frameborder=&quot;0&quot; src=&quot;https://itch.io/embed/2462926?dark=true&quot; width=&quot;552&quot; height=&quot;167&quot;><a href=&quot;https://ashmi.itch.io/fruit-merge-3d&quot;>Fruit Merge 3D by AshMi</a></iframe>">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/MergeFruitPres.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">C#</div>
-                                        <div class="tag">Unity</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Fruit Merge 3D
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/pppcgXd7by0" data-lity data-title="Valpalio" data-desc="
-                        Projet d'école : Valpalio est un projet scolaire créé avec 9 graphistes, 4 concepteurs et programmateurs de jeux et 5 designer.
-                        Le jeu est un RPG où vous incarnez un personnage dans sa voiture et parcourez la ville de valpalio inspiré de la belle valparaiso en réalisant des quêtes avec des phases de combat au tour par tour.">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/Valpalio.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">C#</div>
-                                        <div class="tag">Unity</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Valpalio
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/cBkQOML-TDU" data-lity data-title="Théatre de Molière au Palais Royal" data-desc="
-                        Durée de 6 mois.
-Création d'une application permettant de visiter la reconstitution en 3D du théâtre du Palais-Royal avant la mort de Molière en 1673.
-Développement sur Unreal Engine 4, intégration 3D et UI, développement de l'animation et des interactions.
-                        <br>
-                        <a href=&quot;https://moliere.hypotheses.org/910&quot;> Article ici</a>">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/Moliere.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">Blueprint</div>
-                                        <div class="tag">Unreal Engine</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Théatre de Molière
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/SxQsGRMa8lo" data-lity data-title="Under Pressure" data-desc="
-                        Projet d'école : Under Pressure est un projet scolaire créé avec 8 graphistes, 4 concepteurs et programmateurs de jeux et 3 musiciens.
-                        Le jeu est un Platformer 2D avec 2 niveaux réalisés en 3 mois sur Unity pour les platformes windows, mobile et webgl.
-                        <br>
-                        <a class=&quot;play-btn&quot; href=&quot;PlayUnderPressure/&quot; target=&quot;_blank&quot;></a>">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/keyart1.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">C#</div>
-                                        <div class="tag">Unity</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Under Pressure
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/aXbGtn89mfg" data-lity data-title="Nice Cube" data-desc="
-                        Projet d'école : Nice Cube est un projet Unity 3D fait en 2 mois. Le jeu est prévu pour Android.">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/Logo_NiceCube.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">C#</div>
-                                        <div class="tag">Unity</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Nice Cube
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row">
-
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/vBGanXJ8rR4" data-lity data-title="The Report" data-desc="
-                        Projet d'école : travail en équipe de 5 pour créer une introduction de 10 minutes à un jeu narratif.
-                        Le jeu a été fait sur Unreal engine en blueprint.">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/Cinematic_4.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">Blueprint</div>
-                                        <div class="tag">Unreal</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                The Report
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/K0cAXqhaCZA" data-lity data-title="MultiBan" data-desc="
-                        Projet d'école : Travail en equipe de 3 pour créer un sokoban avec une spécial feature.
-                        La feature est celle des caisse jumelles.Coder en Haxe avec OpenFl.">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/sokoban.PNG">
-                                    <div class="tag_panel">
-                                        <div class="tag">Haxe</div>
-                                        <div class="tag">OpenFl</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                MultiBan
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/87CDLv69p48" data-lity data-title="Rush" data-desc="
-                        Projet d'école : Rush est un projet scolaire où nous devions faire une copie du jeu RUSH avec un nouveau design utilisant Unity et Probuilder (un package Unity) et créer 2 nouveaux niveaux (ici Floating Islands et Paper Crane).
-                        <br>
-                        <a class=&quot;play-btn&quot; href=&quot;PlayRush/&quot; target=&quot;_blank&quot;></a>">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/RushPrev.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">C#</div>
-                                        <div class="tag">Unity</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                        <div class="tag">GameArt</div>
-                                        <div class="tag">SoundDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Rush
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row">
-
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/75XekJfMeiA" data-lity data-title="Tiny Animal Town" data-desc="
-                        Projet d'école : Tiny Animal Town est un projet Unity fait pour la Game Week de IsartDigital en une semaine.
-                        '<br><br>'
-                        - Team - 
-                        '<br>'
-                        Game Artist: PEREZ Julie, SAYSANA Léa, BUTNARIU Ana, PAPILLON Olivier 
-                        '<br>'
-                        Musician: MOESCH Tom 
-                        '<br>'
-                        Game Design and programming: MEZDARI Achraf 
-                        '<br>'
-                        Game Developer: SIX Jonathan">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/TAT_Affiche.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">C#</div>
-                                        <div class="tag">Unity</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Tiny Animal Town
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://www.youtube.com/watch?v=9rZrHvGZjaI" data-lity data-title="Shmup" data-desc="
-                        Projet d'école : Création d'un niveau de Shmup en As3 avec Animate et Flashdevelop.">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/shmup.PNG">
-                                    <div class="tag_panel">
-                                        <div class="tag">As3</div>
-                                        <div class="tag">Animate</div>
-                                        <div class="tag">Flashdevelop</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Shmup
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://www.youtube.com/watch?v=WiKsGlsLfZE" data-lity data-title="Hero Dash" data-desc="
-                        Projet d'école : Création d'un One button game en Haxe avec OpenFl.">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/heroDash.PNG">
-                                    <div class="tag_panel">
-                                        <div class="tag">Haxe</div>
-                                        <div class="tag">OpenFl</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Hero Dash
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row">
-
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/CpHPxHHjL8I" data-lity data-title="Space Walk" data-desc="
-                        Projet d'école : Space Walk est un projet Unreal Engine 4.27 avec comme theme Floor is lava.">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/MiniatureFIL.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">Blueprint</div>
-                                        <div class="tag">Unreal</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Space Walk
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://www.youtube.com/watch?v=BHbv6BlrkbI" data-lity data-title="Linear Escape" data-desc="
-                        Prototype : Prototype de jeu mobile fait sur Unity3D.">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/prevLE.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">C#</div>
-                                        <div class="tag">Unity</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Linear Escape
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/ArPxwL1Jhbs" data-lity data-title="Chilly Space" data-desc="
-                        Projet perso : Jeu mobile réaliser sur unity. Inspiré du jeu Chilly Snow.">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/prevCS.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">C#</div>
-                                        <div class="tag">Unity</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Chilly Space
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row">
-
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/4Vr3cbKROxc" data-lity data-title="Carre Jumper" data-desc="
-                        Projet perso : Mon premier jeu mobile hyper casual fait sur Unity 3D.">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/prevCJ.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">C#</div>
-                                        <div class="tag">Unity</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Carre Jumper
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl">
-                    <div class="centerBox">
-                        <a href="https://youtu.be/w5fWTvMUpAw" data-lity data-title="Memory Match" data-desc="
-                        Projet perso : Mon premier jeu mobile fait sur Android studio.">
-                            <div class="categoryWrapper">
-                                <div class="rainbow">
-                                    <img src="img/prevMM.png">
-                                    <div class="tag_panel">
-                                        <div class="tag">Java</div>
-                                        <div class="tag">Android studio</div>
-                                        <div class="tag">GameDev</div>
-                                        <div class="tag">GameDesign</div>
-                                    </div>
-                                </div>
-                                <button>
-                                    <span>
-                                        <span>
-                                            <span data-attr-span="see more">
-                                                Memory Match
-                                            </span>
-                                        </span>
-                                    </span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-<div class="container-fluid contact_section" id="Contact">
-    <div class="row">
-        <div class="col-xl-4">
-            <div class="row">
-                <a target="_blank" rel="noopener noreferrer" href="http://github.com/AchrafMe">
-                    <div class="github">
-                        <img src="img/Github.png">
-                        &nbsp; github.com/AchrafMe
-                    </div>
-                </a>
-            </div><br>
-            <div class="row">
-                <a target="_blank" rel="noopener noreferrer" href="http://linkedin.com/in/achraf-mezdari">
-                    <div class="linkdin">
-                        <img src="img/linkedin.png">
-                        &nbsp; linkedin.com/in/achraf-mezdari
-                    </div><br>
-                </a>
-            </div>
-        </div>
-        <div class="col-xl-4">
-            <div class="row">
-                <a target="_blank" rel="noopener noreferrer" href="http://youtube.com/channel/UCfPCVCj2HdgpVZm9vdaBabQ">
-                    <div class="youtube">
-                        <img src="img/youtube.png">
-                        &nbsp; youtube.com/channel/UCfPCVCj2HdgpVZm9vdaBabQ
-                    </div>
-                </a>
-            </div><br>
-            <div class="row">
-                <a target="_blank" rel="noopener noreferrer" href="http://twitter.com/AchrafMezdari">
-                    <div class="twitter">
-                        <img src="img/twitter.png">
-                        &nbsp; twitter.com/AchrafMezdari
-                    </div><br><br>
-                </a>
-            </div>
-        </div>
-        <div class="col-xl-4 mailContact">
-
-            <h2>Contact :</h2><hr>
-            <a href="mailto: mezdariachraf@hotmail.fr">
-                mezdariachraf@hotmail.fr
-            </a>
-
-        </div>
+    <video class="videoPres" src="Video/Achraf_DemoReel.mp4" autoplay loop muted></video>
+    <div class="PortfolioDesc">
+      <div class="triangle"></div>
+      <div class="anim-text"></div>
+      <p>Bienvenu sur mon portfolio. <br> <br>
+        Je m'appelle Achraf, diplômé en <b>BTS service informatique aux organisations</b> <br><br>
+        et Mastère en <b>Game Design and programming à Isart Digital</b>. <br><br>
+        Vous trouverez ici tous mes projets d'école et personnel. <br> <br>
+        Vous pouvez me contacter via les réseaux sociaux ou mon mail.</p>
     </div>
-    <br><br><br><br><br>
-    <div class="row copyright">
-        <div class="col">
-            Copyright © 2020 Achraf Mezdari
-        </div>
-    </div>
-</div>
-
-<div class="menu_section">
     <nav class="menu">
-        <ul class="menu__list">
-            <li class="menu__group"><a href="#About" class="menu__link">About me</a></li>
-            <li class="menu__group"><a href="#Work" class="menu__link">Work</a></li>
-            <li class="menu__group"><a href="#Contact" class="menu__link">Contact</a></li>
-        </ul>
+        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+        <label class="menu-open-button" for="menu-open">
+          <img src="img/Profil.jpg" alt="">
+          <span class="hamburger hamburger-1"></span>
+          <span class="hamburger hamburger-2"></span>
+          <span class="hamburger hamburger-3"></span>
+        </label>
+        
+        <a target="_blank" rel="noopener noreferrer" href="http://linkedin.com/in/achraf-mezdari" class="menu-item"> <i class="fa-brands fa-linkedin fa-5x"></i><br><div class="iconTitle">Linkedin</div> </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/yyDrYK7hGp" class="menu-item"> <i class="fa-brands fa-discord fa-5x"></i><br><div class="iconTitle">Discord</div> </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://ashmi.itch.io/" class="menu-item"> <i class="fa-brands fa-itch-io fa-5x"></i><br><div class="iconTitle">Itch-io</div> </a>
+        <a target="_blank" rel="noopener noreferrer" href="mailto: mezdariachraf@hotmail.fr" class="menu-item"> <i class="fa-solid fa-envelope fa-5x"></i><br><div class="iconTitle">Mail</div> </a>
     </nav>
-</div>
+    <div class="HeaderHide">
+      <span class="cross cross-1"></span>
+      <span class="cross cross-2"></span>
+    </div>
+
+    <div id="sun"></div>
+    <div id="sunReflection"></div>
+    <div id="mountain"></div>
+    <div id="hey"><div id="layer-up"></div></div>
+    <div id="layer-0">
+      <div id="layer-1">
+        <div id="layer-2">
+          <div id="lines">
+            <div id="layer-corner"></div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      
+  <br><br>
+  <div class="scroll-content" style="user-select: none;">
+    <div id="Original" class="container owl-carousel">
+      <div class="item" style="background: url('img/Projet/Moliere.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">Blueprint</div>
+          <div class="tag">Unreal Engine</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_0" onclick="OpenProject(this)" class="content">
+          <h2>Theatre de Moliere</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/Sikaria.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">C++</div>
+          <div class="tag">Blueprint</div>
+          <div class="tag">Unreal Engine</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_1" onclick="OpenProject(this)" class="content">
+          <h2>Sikaria</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/MergeFruitPres.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">C#</div>
+          <div class="tag">Unity</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_2" onclick="OpenProject(this)" class="content">
+          <h2>Fruit Merge 3D</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/Valpalio.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">C#</div>
+          <div class="tag">Unity</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_3" onclick="OpenProject(this)" class="content">
+          <h2>Valpalio</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/underpressure.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">C#</div>
+          <div class="tag">Unity</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_4" onclick="OpenProject(this)" class="content">
+          <h2>Under Pressure</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/RushPrev.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">C#</div>
+          <div class="tag">Unity</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+          <div class="tag">GameArt</div>
+          <div class="tag">SoundDesign</div>
+        </div>
+        <div id="project_5" onclick="OpenProject(this)" class="content">
+          <h2>Rush</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/shmup.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">As3</div>
+          <div class="tag">Animate</div>
+          <div class="tag">Flashdevelop</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_6" onclick="OpenProject(this)" class="content">
+          <h2>Shmup</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/heroDash.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">Haxe</div>
+          <div class="tag">OpenFl</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_7" onclick="OpenProject(this)" class="content">
+          <h2>Hero Dash</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/sokoban.PNG') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">Haxe</div>
+          <div class="tag">OpenFl</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_8" onclick="OpenProject(this)" class="content">
+          <h2>Sokoban</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/NiceCube.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">C#</div>
+          <div class="tag">Unity</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_9" onclick="OpenProject(this)" class="content">
+          <h2>Nice Cube</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/TAT_Affiche.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">C#</div>
+          <div class="tag">Unity</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_10" onclick="OpenProject(this)" class="content">
+          <h2>Tiny Animal Town</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/theReport.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">Blueprint</div>
+          <div class="tag">Unreal</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_11" onclick="OpenProject(this)" class="content">
+          <h2>The Report</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/carreJumper.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">C#</div>
+          <div class="tag">Unity</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_12" onclick="OpenProject(this)" class="content">
+          <h2>Carre Jumper</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/chillySpace.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">C#</div>
+          <div class="tag">Unity</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_13" onclick="OpenProject(this)" class="content">
+          <h2>Chilly Space</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/LinearEscape.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">C#</div>
+          <div class="tag">Unity</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_14" onclick="OpenProject(this)" class="content">
+          <h2>Linear Escape</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/memoryMatch.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">Java</div>
+          <div class="tag">Android studio</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_15" onclick="OpenProject(this)" class="content">
+          <h2>Memory Match</h2>
+        </div>
+      </div>
+      <div class="item" style="background: url('img/Projet/spaceWalk.png') no-repeat 50% / cover;">
+        <div class="tag_panel">
+          <div class="tag">Blueprint</div>
+          <div class="tag">Unreal</div>
+          <div class="tag">GameDev</div>
+          <div class="tag">GameDesign</div>
+        </div>
+        <div id="project_16" onclick="OpenProject(this)" class="content">
+          <h2>Space Walk</h2>
+        </div>
+      </div>
+    </div>
+    <div id="project" class="project">
+        <iframe id="projectPlayer" src="https://www.youtube.com/embed/cBkQOML-TDU?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+        <p id="description" class="description"></p>
+    </div>
+  </div>
+
+    <footer>Copyright © 2024 Achraf Mezdari</footer>
+
+      <!-- filters -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="shadowed-goo">
+            
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="20" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+            <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+            <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+            <feComposite in2="shadow" in="goo" result="goo" /> 
+            <feComposite in2="goo" in="SourceGraphic" operator="atop" />
+        </filter>
+      </defs>
+  </svg>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/Lodash.js"></script>
+  <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+  <script src="https://kit.fontawesome.com/67ad38c06d.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+
 </body>
 </html>
+
