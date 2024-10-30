@@ -1,6 +1,9 @@
 <?php
 ini_set('memory_limit', '512M');  // Increase memory limit to 512MB
 ini_set('max_execution_time', '300');  // Increase execution time
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+ini_set('error_log', 'php-error.log'); // Adjust path for your server
 
 require 'vendor/autoload.php';
 
