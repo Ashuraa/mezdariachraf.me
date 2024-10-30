@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer with Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img id="logo" src="img/logo.webp" alt="">
+        <h1>Recherche Aides et Procédures</h1>
+        <button id="adminButton">Admin</button> <!-- Bouton Admin -->
+    </header>
+
+    <!-- Barre de recherche -->
+    <div class="search-bar">
+    <!-- Hamburger menu for small screens -->
+        <button id="hamburgerMenu" class="hamburger">&#9776;</button>
+        <input type="text" id="searchQuery" placeholder="Recherche dans le PDF...">
+        <button onclick="searchPDF()">Rechercher</button>
+    </div>
+
+    <!-- Hamburger Menu Overlay (visible when the menu is open) -->
+    <div id="menuOverlay" class="menu-overlay">
+        <div class="menu-content">
+            <button id="closeMenu" class="close-menu">&times;</button>
+            <div id="menuCategories"></div> <!-- Categories will be displayed here -->
+        </div>
+    </div>
+
+    <!-- Boutons de catégories -->
+    <div class="categories" id="categoriesContainer">
+        <!-- Dynamically populated categories will go here -->
+    </div>
+
+    <!-- Conteneur pour afficher plusieurs pages -->
+    <div id="pdfContainer"></div>
+
+    <!-- Conteneur pour afficher les résultats de recherche -->
+    <div id="searchResults"></div>
+</div>
+
+<!-- Modal for Admin Panel -->
+<div id="adminModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Options Administrateur</h2>
+        <form id="addCategoryForm">
+            <input type="text" name="category_name" placeholder="Nom de la catégorie" required>
+            <input type="number" name="page_start" placeholder="Page de début" required>
+            <input type="number" name="page_end" placeholder="Page de fin" required>
+            <button type="button" onclick="addCategory()">Ajouter Catégorie</button>
+        </form>
+        <h3>Catégories Existantes</h3>
+        <div id="existingCategories"></div> <!-- Conteneur pour afficher les catégories avec bouton Supprimer -->
+    </div>
+</div>
+
+<!-- Charger ton fichier script.js comme un module -->
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
