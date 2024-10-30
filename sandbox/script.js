@@ -151,7 +151,12 @@ function searchPDFPaginated(query, page) {
     const url = `search.php?query=${encodeURIComponent(query)}&startPage=${page}&endPage=${page + pageSize - 1}`;
     
     fetch(url)
-        .then(response => response.json())
+        .then(response => {
+            return response.text().then(text => {
+                console.log(text); // Log the raw response to see what the server is returning
+                return JSON.parse(text); // Attempt to parse it as JSON
+            });
+        })
         .then(data => {
             // Append the results to the search container
             showSearchResults(data, query);
@@ -164,6 +169,7 @@ function searchPDFPaginated(query, page) {
         })
         .catch(error => console.error('Erreur:', error));
 }
+
 
 function showSearchResults(results, query) {
     const searchResultsContainer = document.getElementById('searchResults');
