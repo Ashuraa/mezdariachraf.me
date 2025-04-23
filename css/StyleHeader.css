@@ -20,6 +20,7 @@
 	opacity:1;
 	position:absolute;
 	bottom:0px;
+	top: 250px;
 	left:0;
 	right: 0;
 	margin: 0 -50%;
@@ -92,7 +93,7 @@
 	width: 100%;
 	background-color: rgb(3, 0, 17);
 	position: absolute;
-	bottom: 95px; right: 0; left: 0;
+	top: 325px; right: 0; left: 0;
 	margin: auto;
 	z-index: -3;
 	transform: perspective(200px);

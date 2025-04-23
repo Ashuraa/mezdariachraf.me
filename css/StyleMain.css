@@ -35,7 +35,7 @@ a:hover{
 #HeaderPres{
   width: 100%;
   position: absolute;
-  height: 428px;
+  height: 50%;
   top: 0px;
   z-index: 0;
   background: repeating-linear-gradient(0deg, #49008d1f 0%, #46007969 10%, #22222200 20%, rgb(72 13 145 / 12%) 50%) 0 / 30px 30px;
@@ -103,6 +103,8 @@ footer{
     bottom: 1%;
     color: white;
     font-size: small;
+    text-align: center;
+    width: 100%;
 }
 
 @property --angle {
